@@ -1,0 +1,85 @@
+.pa-modal {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: $modal-max-width;
+    width: 100%;
+    height: $modal-height;
+    margin: 0 auto;
+    background-color: #ffffff;
+
+    @include respond-to('mobile') {}
+
+    &--small {
+        max-width: 500px;
+        height: 50vh;
+        min-height: inherit;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: in-rem(100px);
+        min-height: in-rem(70px);
+        padding: 0 in-rem(50px);
+        background-color: $main-color-2;
+        color: $text-color-2;
+
+
+        @include respond-to('mobile') {
+            height: 60px;
+            padding: 0 in-rem(12px);
+        }
+    }
+
+    &__btn-close {
+        @include font-size-rem(30px);
+        cursor: pointer;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        overflow-y: auto;
+    }
+
+    &__content-inner {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        padding: in-rem(30px) in-rem(50px);
+
+        @include respond-to('mobile') {
+            padding: in-rem(20px) in-rem(10px);
+        }
+    }
+
+    &__footer {
+        //position: absolute;
+        //bottom: 0;
+        display: flex;
+        justify-content: flex-end;
+        min-height: in-rem(90px);
+        padding: in-rem(30px) in-rem(50px);
+        background-color: $footer-modal-bg;
+        box-sizing: border-box;
+
+        @include respond-to('mobile') {
+            padding: in-rem(20px) in-rem(10px);
+        }
+    }
+
+    &__wrapper {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: set-z(modal);
+        display: flex;
+        align-items: center;
+        overflow: auto;
+    }
+}

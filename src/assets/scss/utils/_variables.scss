@@ -1,0 +1,239 @@
+/******************/
+/* LAYOUT */
+$content-width: 1232px;
+
+$height-header: 60px;
+$width-sidebar: 310px;
+$height-btn-sidebar: 50px;
+
+$modal-max-width: 920px;
+$modal-height: 100vh;
+
+/******************/
+/* MEDIA QUERIES */
+$isMobile: "max-width: 768px"; // legacy
+$isDesktop: "min-width: 769px"; // legacy
+
+$breakpoints: (
+        'mobile': (max-width: 767px),
+        'desktop': (min-width: 768px),
+        'max-desktop': (max-width: 1199px),
+        'large-desktop': (min-width: 1200px),
+);
+
+/******************/
+/* FONTS */
+$base-fsz: 14px;
+$base-lh: 20px;
+
+$mobile-base-fsz: 12px;
+$mobile-base-lh: 16px;
+
+$small-fsz: 12px;
+$small-lh: 20px;
+
+$form-fsz: 16px;
+$form-lh: 20px;
+
+$--form-label-fsz: 14px;
+$--form-label-lh: 20px;
+
+$art-fsz: 22px;
+$art-lh: 33px;
+
+$price-fsz: 28px;
+$price-lh: 33px;
+
+//desktop
+$title-fsz-1: 42px;
+$title-lh-1: 50px;
+
+$title-fsz-2: 28px;
+$title-lh-2: 33px;
+
+$title-fsz-3: 22px;
+$title-lh-3: 25px;
+
+$title-fsz-4: 18px;
+$title-lh-4: 20px;
+
+$title-fsz-5: 16px;
+$title-lh-5: 20px;
+
+$title-fsz-6: 12px;
+$title-lh-6: 17px;
+
+$titles: (
+        1: (
+                fsz: $title-fsz-1,
+                lh: $title-lh-1
+        ),
+        2: (
+                fsz: $title-fsz-2,
+                lh: $title-lh-2
+        ),
+        3: (
+                fsz: $title-fsz-3,
+                lh: $title-lh-3
+        ),
+        4: (
+                fsz: $title-fsz-4,
+                lh: $title-lh-4,
+                weight: 600,
+        ),
+        5: (
+                fsz: $title-fsz-5,
+                lh: $title-lh-5
+        ),
+        6: (
+                fsz: $title-fsz-6,
+                lh: $title-lh-6
+        )
+);
+
+// mobile
+$title-mobile-fsz-1: 28px;
+$title-mobile-lh-1: 29px;
+
+$title-mobile-fsz-2: 20px;
+$title-mobile-lh-2: 22px;
+
+$title-mobile-fsz-3: 17px;
+$title-mobile-lh-3: 21px;
+
+$title-mobile-fsz-4: 18px;
+$title-mobile-lh-4: 20px;
+
+$title-mobile-fsz-5: 14px;
+$title-mobile-lh-5: 21px;
+
+$title-mobile-fsz-6: 10px;
+$title-mobile-lh-6: 13px;
+
+$titles-mobile: (
+        1: (
+                fsz: $title-mobile-fsz-1,
+                lh: $title-mobile-lh-1
+        ),
+        2: (
+                fsz: $title-mobile-fsz-2,
+                lh: $title-mobile-lh-2
+        ),
+        3: (
+                fsz: $title-mobile-fsz-3,
+                lh: $title-mobile-lh-3
+        ),
+        4: (
+                fsz: $title-mobile-fsz-4,
+                lh: $title-mobile-lh-4,
+                weight: 600,
+        ),
+        5: (
+                fsz: $title-mobile-fsz-5,
+                lh: $title-mobile-lh-5
+        ),
+        6: (
+                fsz: $title-mobile-fsz-6,
+                lh: $title-mobile-lh-6
+        )
+);
+
+/******************/
+/* COLORS */
+$main-color-1: #2d7dd2;
+$main-color-2: #41bab9;
+$main-color-3: #324057;
+$main-color-4: #b8e6d3;
+$main-color-5: #63aaf5;
+
+$menu-hover: #47ccc5;
+$menu-active: #489ea1;
+
+$sidebar-hover: #475669;
+$sidebar-active: #475669;
+
+$tip-color: #a1b3ad;
+
+$text-color-1: $main-color-3;
+$text-color-2: #ffffff;
+
+$accent-color-1: #9e4770;
+$accent-color-2: #bdc667;
+$accent-color-3: #a2ad6c;
+
+$btn-default-color: transparent;
+$btn-default-hover-color: transparent;
+$btn-default-active-color: transparent;
+
+$btn-primary-color: $main-color-1;
+$btn-primary-hover-color: $main-color-5;
+$btn-primary-active-color: #2765b8;
+
+$btn-text-color: $btn-primary-color;
+$btn-text-hover-color: $btn-primary-hover-color;
+$btn-text-active-color: $btn-primary-active-color;
+
+$btn-accent-color: $accent-color-1;
+$btn-accent-hover-color: #b86589;
+$btn-accent-active-color: #853c61;
+
+$btn-disabled-color: $tip-color;
+
+$radio-btn-color: transparent;
+$radio-btn-color-selected: #d5e0dc;
+
+$--link-color: $main-color-5;
+$--link-color-hover: #80bdff;
+$--link-color-active: #2765b8;
+
+$form-item-border-color: $tip-color;
+
+$table-header-color: #f8faf9;
+$table-row-color: #ffffff;
+
+$panel-footer-color: #f8faf9;
+
+$main-bg: #e4ebe8;
+$card-bg: #ffffff;
+$block-bg: #ffffff;
+$footer-modal-bg: #d4dbd8;
+
+$error-color: #e4572e;
+$warning-color: #f3a712;
+$success-color: #5bba6f;
+
+/******************/
+/* OTHERS */
+$z-layers: (
+        bottomless-pit: -9999,
+        default: 1,
+        dropdown: 500,
+        sidebar: 750,
+        header: 750,
+        overlay: 1000,
+        modal: 1005,
+        loading: 1000,
+        popover: 800,
+);
+
+$border-radius: 4px;
+
+$padding-btn-vt: 10px;
+$padding-btn-hz: 20px;
+
+$border-color: $main-bg;
+$border-form-color: $tip-color;
+
+$main-indent: 20px;
+$main-indent-mobile: 8px;
+
+$main-internal-indent: 20px;
+
+$avatar-size: (
+        small: 42px,
+        medium: 52px,
+        large: 92px,
+        big: 172px,
+);
+
+$shadow-inner: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.1);

@@ -1,0 +1,47 @@
+@import url(~element-ui/lib/theme-chalk/form.css);
+
+/***************
+ /* OVERRIDE */
+
+.el-form-item {
+
+    &__content {
+        line-height: 1;
+    }
+
+    &__label {
+        @include font-size-rem($--form-label-fsz);
+        @include line-height-em($--form-label-lh, $--form-label-fsz);
+    }
+    &.is-required .el-form-item__label {
+        &:before{
+            content: none;
+        }
+        &:after {
+            content: '*';
+            margin-left: 5px;
+        }
+    }
+
+    &__error {
+        color: $error-color;
+    }
+
+    &.is-success .el-input__inner,
+    &.is-success .el-input__inner:focus,
+    &.is-success .el-textarea__inner,
+    &.is-success .el-textarea__inner:focus {
+        border-color: $menu-hover;
+    }
+
+    &.is-error .el-input__inner,
+    &.is-error .el-input__inner:focus,
+    &.is-error .el-textarea__inner,
+    &.is-error .el-textarea__inner:focus  {
+        border-color: $error-color;
+    }
+
+    .el-form-item {
+        margin-bottom: 22px;
+    }
+}

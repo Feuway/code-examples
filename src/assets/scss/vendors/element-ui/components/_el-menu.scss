@@ -1,0 +1,44 @@
+@import url(~element-ui/lib/theme-chalk/menu.css);
+
+/**************
+ /* OVERRIDE */
+
+.el-menu {
+    background-color: inherit;
+    border-right: none;
+}
+
+.el-submenu__icon-arrow {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: in-rem(20px);
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-feature-settings: 'liga';
+    font-feature-settings: 'liga';
+}
+
+.el-submenu .el-menu-item {
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+    height: auto;
+    line-height: 16px;
+}
+
+.el-menu-item {
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+    height: auto;
+    line-height: 16px;
+}

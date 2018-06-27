@@ -1,0 +1,75 @@
+@import url(~element-ui/lib/theme-chalk/input.css);
+@import url(~element-ui/lib/theme-chalk/input-number.css);
+
+/**************
+ /* OVERRIDE */
+
+.el-input {
+    max-width: 100%;
+
+    &__inner {
+        height: auto;
+        padding: in-rem(7.5px) in-rem(10px);
+        background-color: transparent;
+        border-color: $form-item-border-color;
+        border-radius: 0;
+        @include font-size-rem($base-fsz);
+        line-height: 1;
+
+        &::placeholder {
+            color: $tip-color;
+        }
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.el-input-group {
+
+    &__append {
+        padding: 0 in-rem($padding-btn-hz);
+        background-color: $btn-primary-color;
+        border-color: $btn-primary-color;
+        color: $text-color-2;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $btn-primary-hover-color;
+            border-color: $btn-primary-hover-color;
+        }
+        &:active {
+            background-color: $btn-primary-active-color;
+            border-color: $btn-primary-active-color;
+        }
+    }
+
+    &__prepend {
+        border-color: $form-item-border-color;
+    }
+}
+
+.el-input-group__prepend .el-select {
+    .el-input__inner {
+        padding: 0 10px;
+    }
+}
+
+.el-input-number.is-controls-right .el-input-number__decrease {
+    bottom: 3px;
+}
+
+.el-input-number.is-controls-right .el-input-number__decrease,
+.el-input-number.is-controls-right .el-input-number__increase {
+    height: 45%;
+    line-height: 1;
+    border-color: $form-item-border-color;
+}
+
+.el-textarea__inner,
+.el-checkbox__inner,
+.el-checkbox-button__inner {
+    border-color: $form-item-border-color !important;
+}

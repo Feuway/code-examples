@@ -1,0 +1,170 @@
+html {
+  font-size: $base-fsz;
+  @include line-height-em($base-lh, $base-fsz);
+
+  @include respond-to('mobile') {
+    font-size: $mobile-base-fsz;
+    @include line-height-em($mobile-base-lh, $mobile-base-fsz);
+  }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: $main-bg;
+    color: $text-color-1;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-weight: 400;
+    overflow: hidden !important;
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+}
+
+input {
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+button {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-weight: 400;
+    outline: 0;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    padding-left: 2em;
+
+    li {
+        line-height: 1.5em;
+    }
+}
+
+hr.separation-line {
+    border-style: solid;
+    border-width: 0.5px;
+
+    &--white {
+        border-color: #ffffff;
+    }
+
+
+    &--black {
+        border-color: #000000;
+    }
+}
+
+.inner-wrap {
+    padding: 0 in-rem(20px);
+
+    @media($isMobile) {
+        padding: 0 in-rem(12px);
+    }
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.column {
+        flex-direction: column;
+    }
+
+    &.full-width {
+        width: 100%;
+    }
+}
+
+.text-stroke {
+    text-shadow:
+        -0   -2px 0   #FFFFFF,
+        0   -2px 0   #FFFFFF,
+        -0    2px 0   #FFFFFF,
+        0    2px 0   #FFFFFF,
+        -2px -0   0   #FFFFFF,
+        2px -0   0   #FFFFFF,
+        -2px  0   0   #FFFFFF,
+        2px  0   0   #FFFFFF,
+        -1px -2px 0   #FFFFFF,
+        1px -2px 0   #FFFFFF,
+        -1px  2px 0   #FFFFFF,
+        1px  2px 0   #FFFFFF,
+        -2px -1px 0   #FFFFFF,
+        2px -1px 0   #FFFFFF,
+        -2px  1px 0   #FFFFFF,
+        2px  1px 0   #FFFFFF,
+        -2px -2px 0   #FFFFFF,
+        2px -2px 0   #FFFFFF,
+        -2px  2px 0   #FFFFFF,
+        2px  2px 0   #FFFFFF,
+        -2px -2px 0   #FFFFFF,
+        2px -2px 0   #FFFFFF,
+        -2px  2px 0   #FFFFFF,
+        2px  2px 0   #FFFFFF;
+}
+
+.color-red {
+    color: $error-color !important;
+}
+
+.color-green {
+    color: $success-color !important;
+}
+
+.block-shadow {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.05);
+}
+
+.svg-icon {
+
+    &--medium {
+        width: in-rem(30px);
+        height: in-rem(30px);
+    }
+}
+
+.tip-text {
+    color: $tip-color;
+    @include font-size-rem($small-fsz);
+    @include line-height-em($small-lh, $small-fsz);
+}
+
+/**************
+ /* ICONS */
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+/**************
+ /* OVERRIDE */
+.vuescroll-panel {
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+}

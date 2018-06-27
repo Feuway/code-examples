@@ -1,0 +1,20 @@
+@import url(~element-ui/lib/theme-chalk/select.css);
+@import url(~element-ui/lib/theme-chalk/option.css);
+@import url(~element-ui/lib/theme-chalk/scrollbar.css);
+
+.el-select {
+    width: 100%;
+
+    &__caret {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/**************
+ /* OVERRIDE */
+
+.el-select-dropdown.is-multiple .el-select-dropdown__item.selected::after {
+    content: none;
+}

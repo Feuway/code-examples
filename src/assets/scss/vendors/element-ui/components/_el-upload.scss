@@ -1,0 +1,18 @@
+@import "~element-ui/lib/theme-chalk/upload";
+
+.el-upload {
+    .el-upload-dragger {
+        width: auto;
+        height: auto;
+        background: #FBFDFF;
+        border: 1px dashed #d9d9d9;
+        border-radius: 6px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+
+        &:hover {
+            border-color: #26B99A;
+        }
+    }
+}

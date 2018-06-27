@@ -1,0 +1,45 @@
+@import url(~element-ui/lib/theme-chalk/checkbox.css);
+
+/**************
+ /* OVERRIDE */
+.el-checkbox {
+    display: flex;
+    margin: in-rem(10px) 0;
+    font-weight: 400;
+    white-space: normal;
+
+    & + & {
+        margin-left: 0;
+    }
+
+    &__label {
+        @include font-size-rem($--form-label-fsz);
+        @include line-height-em($--form-label-lh, $--form-label-fsz);
+    }
+
+    &__inner {
+        @include respond-to('desktop') {
+            @include size(20px);
+
+            &:after {
+                top: 2px;
+                left: 7px;
+                height: 11px;
+            }
+
+            &::before {
+                top: 8px !important;
+            }
+        }
+    }
+
+    &__input {
+        &.is-checked + .el-checkbox__label {
+            color: inherit;
+        }
+    }
+
+    &.white {
+        color: $text-color-2;
+    }
+}

@@ -1,0 +1,41 @@
+[class*=" el-icon-"], [class^=el-icon-] {
+    @extend .material-icons;
+    font-size: 20px;
+}
+
+.el-icon-date:before {
+    content: 'event';
+}
+
+.el-icon-arrow-left:before {
+  content: "keyboard_arrow_left";
+}
+
+.el-icon-arrow-right:before {
+    content: "keyboard_arrow_right";
+}
+
+.el-icon-d-arrow-left:before {
+    content: "first_page";
+}
+
+.el-icon-d-arrow-right:before {
+    content: "last_page";
+}
+
+.el-icon-circle-close:before {
+    content: 'highlight_off';
+    font-size: 14px;
+}
+
+.el-icon-arrow-up:before {
+    content: 'keyboard_arrow_up';
+}
+
+.el-icon-arrow-down:before {
+    content: 'keyboard_arrow_down';
+}
+
+.el-icon-close:before {
+    content: 'clear';
+}

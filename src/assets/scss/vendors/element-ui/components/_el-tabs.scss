@@ -1,0 +1,28 @@
+@import url(~element-ui/lib/theme-chalk/tabs.css);
+
+.el-tabs {
+
+    &__active-bar {
+        background-color: $main-color-2;
+    }
+
+    &__item {
+        @include respond-to('mobile') {
+            width: 85px;
+            height: auto;
+            padding: 20px 10px 20px 0;
+            text-align: left;
+            line-height: 1;
+            white-space: normal;
+            box-sizing: content-box;
+        }
+
+        &.is-active {
+            color: $main-color-2;
+        }
+
+        &:hover {
+            color: $main-color-2;
+        }
+    }
+}

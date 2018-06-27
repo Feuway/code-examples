@@ -1,0 +1,46 @@
+.pa-title {
+    margin: 0;
+    @include title($base-fsz, $base-lh);
+    color: inherit;
+
+    @each $key, $value in $titles {
+        &--level-#{$key} {
+            $font-size: map-get($value, fsz);
+            $line-height: map-get($value, lh);
+            @if type-of($value) == 'map' {
+                @include title($font-size, $line-height);
+                @if map-has-key($value, weight) {
+                    font-weight: map-get($value, weight);
+                }
+            }
+        }
+    }
+
+    @include respond-to('mobile') {
+        @each $key, $value in $titles-mobile {
+            &--level-#{$key} {
+                $font-size: map-get($value, fsz);
+                $line-height: map-get($value, lh);
+                @if type-of($value) == 'map' {
+                    @include title($font-size, $line-height);
+                    @if map-has-key($value, weight) {
+                        font-weight: map-get($value, weight);
+                    }
+                }
+            }
+        }
+    }
+
+    &--left {
+        text-align: left;
+    }
+    &--center {
+        text-align: center;
+    }
+    &--right {
+        text-align: right;
+    }
+    &--no-wrap {
+        white-space: nowrap;
+    }
+}

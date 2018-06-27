@@ -1,0 +1,78 @@
+/***********
+/* FONTS */
+@import "fonts/fonts";
+
+/***********
+/* UTILS */
+@import "utils/variables";
+@import "utils/mixins";
+@import "utils/functions";
+@import "utils/transitions";
+@import "utils/animations";
+
+/**********
+/* BASE */
+@import "base/base";
+
+/***********
+/* VENDORS */
+@import "vendors/element-ui/index";
+
+/****************
+/* COMPONENTS */
+@import "components/pa-title";
+@import "components/pa-icon";
+@import "components/pa-button";
+@import "components/pa-modal";
+@import "components/pa-table";
+@import "components/pa-card";
+@import "components/pa-card-service";
+@import "components/pa-card-notice";
+@import "components/pa-alert";
+@import "components/pa-overlay";
+@import "components/pa-block-button";
+@import "components/pa-panel";
+@import "components/pa-stepper";
+@import "components/pa-upload-cropper";
+@import "components/pa-avatar";
+@import "components/pa-loading";
+@import "components/pa-link";
+@import "components/pa-content-wrap";
+
+/***********
+/* LAYOUT */
+@import "layout/main-header";
+@import "layout/main-nav";
+@import "layout/main-container";
+@import "layout/side-bar";
+@import "layout/app-content";
+@import "layout/app-page-header";
+@import "layout/user";
+@import "layout/nav-modal";
+@import "layout/control-panel";
+@import "layout/found-contact";
+@import "layout/pass-staff-member";
+@import "layout/pass-status";
+@import "layout/working-time";
+@import "layout/status-icon";
+@import "layout/vertical-list";
+@import "layout/debt";
+@import "layout/payment";
+@import "layout/search-edm";
+@import "layout/cost-pass";
+@import "layout/selection-staff-member";
+@import "layout/success-notice";
+@import "layout/operator-edm";
+@import "layout/camera-block";
+@import "layout/welcome";
+@import "layout/badge";
+
+/***********
+/* PAGES */
+@import "pages/auth";
+@import "pages/dashboard";
+@import "pages/staff-member";
+@import "pages/missing-page";
+@import "pages/help";
+@import "pages/watching-videos";
+

@@ -1,0 +1,15 @@
+@keyframes wave {
+    0% {background-position:0% 80%}
+    50% {background-position:100% 20%}
+    100% {background-position:0% 80%}
+}
+
+@keyframes fx {
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

@@ -1,0 +1,59 @@
+/// Примесь для установки размера шрифты в rem
+/// @param {Length} $font-size
+@mixin font-size-rem($font-size) {
+  font-size: ($font-size / $base-fsz) * 1rem;
+}
+
+/// Примесь для установки интерлиньяжа в em
+/// @param {Length} $font-size
+/// @param {Length} $line-height
+@mixin line-height-em($line-height, $font-size) {
+  line-height: ($line-height / $font-size) * 1em;
+}
+
+/// Примесь для установки высоты в rem
+@mixin height-rem($size) {
+  height: ($size / $base-fsz) * 1rem;
+}
+
+/// Примесь для установки свойств для заголовков
+/// @param {Length} $font-size
+/// @param {Length} $line-height
+@mixin title($font-size, $line-height) {
+  font-weight: 400;
+  // @include font-size-rem($font-size);
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+/// Примесь для сброса внутреннего обтекания
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+/// Примесь для определения размера
+/// @param {Length} $width
+/// @param {Length} $height
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+/// Управление точками останова.
+/// @access public
+/// @param {String} $breakpoint - точка останова
+/// @requires $breakpoints
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  } @else {
+    @error 'Не указано значение для `#{$breakpoint}`. '
+         + 'Пожалуйста, убедитесь, что точка остановки объявлена в карте `$breakpoints`.';
+  }
+}

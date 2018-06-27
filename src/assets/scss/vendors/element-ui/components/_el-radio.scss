@@ -1,0 +1,67 @@
+@import url(~element-ui/lib/theme-chalk/radio.css);
+
+/***************
+ /* OVERRIDE */
+
+.el-radio {
+    &__inner {
+        border: 1px solid $form-item-border-color;
+    }
+}
+
+.el-radio-group {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.el-radio-button {
+    flex-grow: 1;
+    position: relative;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    outline: none;
+
+    &__orig-radio {
+        position: absolute;
+        z-index: set-z(bottomless-pit);
+        display: none;
+        opacity: 0;
+
+        &:checked + .el-radio-button__inner {
+            background-color: $radio-btn-color-selected;
+            box-shadow: $shadow-inner;
+        }
+    }
+
+    &__inner {
+        flex-grow: 1;
+        margin: 0;
+        padding: in-rem($padding-btn-vt) in-rem($padding-btn-hz);
+        background: $radio-btn-color;
+        border: 1px solid $form-item-border-color;
+        border-left: 0;
+        border-radius: 0;
+        color: $text-color-1;
+        @include font-size-rem($base-fsz);
+        line-height: 1;
+        white-space: nowrap;
+        vertical-align: middle;
+        text-align: center;
+        box-sizing: border-box;
+        cursor: pointer;
+        transition: all .3s cubic-bezier(.645,.045,.355,1);
+    }
+
+    &:first-child .el-radio-button__inner {
+        border-left: 1px solid $form-item-border-color;
+        border-radius: $border-radius 0 0 $border-radius;
+    }
+
+
+    &:last-child .el-radio-button__inner {
+        border-radius: 0 $border-radius $border-radius 0;
+    }
+}
